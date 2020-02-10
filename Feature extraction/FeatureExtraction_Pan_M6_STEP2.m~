@@ -1,0 +1,43 @@
+%FeatureExtraction_Pan_M6_STEP2
+% Process: Compute
+% Data: Pan dataset
+% Framework: M6
+%10.31.2018
+
+
+%DistSignature_Domains_Marcotte
+% My Kernel with Marcotte will be Gaussizan, not Dotsignature
+% So, the final kernel is:
+% K(x,x?)=exp(??||x?x?||2)
+%K(AB,CD) = min(K(A,C)+K(B,D), K(A,D)+K(B,C))
+% To save calucaltion times, we want all K(x,y) caculated without the Gamma
+% So, I need to calculate: 
+% (1) scale all features
+% (2) ||x-x'||2
+
+clear 
+%% Add data and function paths
+crnt_dir = pwd;
+parent_dir = crnt_dir(1:(find(crnt_dir==crnt_dir(1),1,'last'))-1);
+addpath(genpath(parent_dir))
+addpath(genpath(cd))
+
+%%
+tic 
+%%
+%load DomainProfiles_HH_Marcotte.mat Scores Uni
+load Pan_Featurespfam.mat Scores
+load PanUni.mat PanUni Hs
+%meanS = repmat(mean(Scores),size(Scores,1),1);
+% stdS  = repmat(std(Scores),size(Scores,1),1);
+%Features = (Scores - meanS)./ stdS;
+ZscoreS = zscore(Scores);
+%isequal(Features,ZscoreS)
+toc
+DistSign = pdist2(ZscoreS,ZscoreS);
+toc
+
+%% save 
+%save Vidal_Signature_Dist_Domains.mat DistSign HORFv51  -v7.3 
+%save Features_M6_VidalHH.mat DistSign HORFv51  -v7.3 
+save Features_M6_PanHH.mat DistSign PanUni Hs  -v7.3 
