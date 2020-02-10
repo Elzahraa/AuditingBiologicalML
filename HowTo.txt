@@ -1,0 +1,13 @@
+To run all the experiments, you need to: 
+
+(1) [Feature Extraction subfolder]: 
+Extract features from raw sequences. 
+Features are provided only for M3 due to repository size limitation.
+
+(2) [1 Model optimization through 7 Generalizability Auditor II subfolders]: 
+Go through the steps in order. 
+
+Note: 
+- You can follow a single framework (F1-F7) and dataset (D1-D3) without 
+running all experiments for all frameworks and datasets.
+- Feature extraction for M6 is extremely computationally expensive.

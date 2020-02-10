@@ -1,0 +1,62 @@
+Subfolder Descriptions:
+ 
+[Jupyter notebooks]: 
+- Notebooks summarizing the auditing process for the applications in the manuscript
+ 
+[Datasets]: 
+- Original datasets (PPI, protein IDs, sequences, etc) for the three
+PPI datasets in the study (Marcotte, Pan, and Vidal)
+- Splits into training, validation and testing with and without redundancy reduction
+- Generalizability assessment data
+ 
+[Feature extraction]:
+- Scripts to extract features for the frameworks in the study (M1-M7) 
+- Scripts to randomize features for F1-F7 
+*Note that some features are shared among multiple frameworks that utilize 
+different ML models
+ 
+[Features]:
+- Original features for F3 
+- Files necessary to extract remaining framework features
+*Note: due to repository size limitations, the full feature files and 
+randomized featuree files are not included in the repository and are 
+available to download upon request.
+ 
+[Functions]:
+- Matlab functions necessary to run the scripts
+- LibSVM-Matlab interfacing files for Mac64 and Linux64
+ 
+[Paramters]:
+- Summary of the parameter values used in model optimization and testing
+ 
+[Results]:
+- Result summary files
+- Detailed results for F3
+*Note: due to repository size limitations, the full result files are not 
+included in the repository and are available to download upon request.
+ 
+[1 Model optimization]:
+- Scripts to optimize F1-F7 for datasets D1-D3
+ 
+[2 Generalizability Auditor I]:  
+- Scripts to test F1-F7 for D1 and F2 on independent examples from D3
+       
+[3 Feature Auditor]:
+- Scripts to test the performance of F1-F7 on D1-D3 when protein features are randomized
+         
+[4 Node degree Auditor]:  
+- Scripts to compare the original performance of F1-F7 for D1-D3 to the case when 
+the models are trained on protein node degrees in training networks instead 
+of protein sequence features
+     
+[5 Recurrence Auditor]: 
+- Scripts to compare the original performance of F1-F7 for D1-D3 to the scoring 
+function that maps protein node degrees to PPI probability 
+        
+[6 Debiasing Auditor]:   
+- Scripts to compare the original performance of F1-F7 for D1-D3 to the case when 
+the node degree bias is removed from training 
+ 
+[7 Generalizability Auditor II]:
+- Scripts to test F1-F7 for D1 and F2 on independent examples from D3 after 
+the node degree bias is removed from training 

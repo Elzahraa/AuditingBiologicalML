@@ -1,0 +1,6 @@
+To run all experiments in this repository, you need: 
+(1) Matlab >= R2017a with Bioinformatics Toolbox
+(2) LibSVM interface for Matlab (available at LibSVM website)
+
+We provide LibSVM interfacing files for Mac64 and Linux64 platforms. 
+Please make sure to site LibSVM appropriately if you are reusing the code. 
