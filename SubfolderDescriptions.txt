@@ -31,7 +31,6 @@ available to download upon request.
  
 [Results]:
 - Result summary files
-- Detailed results for F3
 *Note: due to repository size limitations, the full result files are not 
 included in the repository and are available to download upon request.
  
