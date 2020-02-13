@@ -26,7 +26,7 @@ TaskTitle='RandLearn_r4';
 Model='M7';
 Dataset='PanHH';
 OutputFileHeader=['TK',TKs,'_',TaskTitle,'_', Model,'_', Dataset]
-SumFile=['Summary_TK', num2str(TKs),'_',TaskTitle,'_', Model,'_', Dataset]
+SumFile=['TK', num2str(TKs),'Summary','_',TaskTitle,'_', Model,'_', Dataset]
 
 %% Paramters
 NegLabel = 0;
@@ -200,5 +200,5 @@ for paramterSet=1:length(Paramters)
 end
 
 %% Summary stats
-[Summary , SummaryAUC] = fun_SummaryStatFilesNoC123( Paramters, [], [], ...
+[Summary , SummaryAUC] = fun_SummaryStatFilesNoC123_withSkips( Paramters, [], [], ...
     OutputFileHeader, SumFile, []);

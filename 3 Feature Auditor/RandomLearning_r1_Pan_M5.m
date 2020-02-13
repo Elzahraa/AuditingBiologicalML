@@ -174,5 +174,5 @@ end
 
 
 %% Summary stats
-[Summary , SummaryAUC] = fun_SummaryStatFilesNoC123( Paramters, [], [], ...
+[Summary , SummaryAUC] = fun_SummaryStatFilesNoC123_withSkips( Paramters, [], [], ...
     OutputFileHeader, SumFile, []);
